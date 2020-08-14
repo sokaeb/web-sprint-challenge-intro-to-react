@@ -3,17 +3,28 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-border: 2px solid red;
 margin: ${props => props.theme.margins};
 color: ${props => props.theme.black};
 background-color: ${props => props.theme.white};
 opacity: 0.6;
 `
+const StyledPara = styled.p`
+/* :hover {
+    color: ${props => props.theme.gold};
+} */
+`
+
 const StyledName = styled.h2`
+border: 1px dashed darkgoldenrod;
+margin: ${props => props.theme.margins};
+/* background-color: ${props => props.theme.black};
+opacity: 0.6; */
+background-color: ${props => props.theme.backgroundColor};
 color: ${props => props.theme.white};
 :hover {
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.grey};
     };
+padding: ${props => props.theme.paddings.small};
 `
 
 export default function Character(props) {
@@ -31,49 +42,49 @@ export default function Character(props) {
                 <>
                     {
                         isDetailsOn === true
-                        ?   <p>Height: {character.height}</p>
+                        ?   <StyledPara>Height: {character.height}</StyledPara>
                         : null
                     }
                 </>
                 <>
                     {
                         isDetailsOn === true
-                        ?   <p>Mass(kg): {character.mass}</p>
+                        ?   <StyledPara>Mass(kg): {character.mass}</StyledPara>
                         : null
                     }
                 </>
                 <>
                     {
                         isDetailsOn === true
-                        ?   <p>Hair Color: {character.hair_color}</p>
+                        ?   <StyledPara>Hair Color: {character.hair_color}</StyledPara>
                         : null
                     }
                 </>
                 <>
                     {
                         isDetailsOn === true
-                        ?   <p>Skin Color: {character.skin_color}</p>
+                        ?   <StyledPara>Skin Color: {character.skin_color}</StyledPara>
                         : null
                     }
                 </>
                 <>
                     {
                         isDetailsOn === true
-                        ?   <p>Eye Color: {character.eye_color}</p>
+                        ?   <StyledPara>Eye Color: {character.eye_color}</StyledPara>
                         : null
                     }
                 </>
                 <>
                     {
                         isDetailsOn === true
-                        ?   <p>Birth Year: {character.birth_year}</p>
+                        ?   <StyledPara>Birth Year: {character.birth_year}</StyledPara>
                         : null
                     }
                 </>
                 <>
                     {
                         isDetailsOn === true
-                        ?   <p>Gender: {character.gender}</p>
+                        ?   <StyledPara>Gender: {character.gender}</StyledPara>
                         : null
                     }
                 </>
