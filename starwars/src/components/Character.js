@@ -1,7 +1,20 @@
 // Write your Character component here
 import React, {useState} from 'react';
-// import axios from 'axios';
 import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+border: 2px solid red;
+margin: ${props => props.theme.margins};
+color: ${props => props.theme.black};
+background-color: ${props => props.theme.white};
+opacity: 0.6;
+`
+const StyledName = styled.h2`
+color: ${props => props.theme.white};
+:hover {
+    color: ${props => props.theme.black};
+    };
+`
 
 export default function Character(props) {
     const {character} = props
@@ -12,9 +25,9 @@ export default function Character(props) {
     }
 
     return (
-        <div className='character container'>
-            <div onClick={toggleDetails}>{character.name}</div>
-            <div className='character details'>
+        <div className='characterContainer'>
+            <StyledName className='characterName' onClick={toggleDetails}>{character.name}</StyledName>
+            <StyledDiv className='character details'>
                 <>
                     {
                         isDetailsOn === true
@@ -64,7 +77,7 @@ export default function Character(props) {
                         : null
                     }
                 </>
-            </div>
+            </StyledDiv>
            
         </div>
 

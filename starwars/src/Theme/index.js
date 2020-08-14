@@ -6,10 +6,7 @@ const theme = {
     black: 'black',
     grey: '#A9A9A9',
     tabletBreakpoint: '600px',
-    margins: {
-        big: '5%',
-        small: '2%',
-    },
+    margins: '0 30%',
     paddings: {
         big: '3%',
         small: '1%',
