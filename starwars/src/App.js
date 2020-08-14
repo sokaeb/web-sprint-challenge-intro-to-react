@@ -29,7 +29,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       { characters.map((char, ind) => {
-          return <Character character={char} />
+          return <Character character={char} key={ind} />
       })}
     </div>
   );
